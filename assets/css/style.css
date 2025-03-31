@@ -1,0 +1,198 @@
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #181818;
+    --bg-tertiary: #282828;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent: #1DB954;
+    --accent-hover: #1ed760;
+    --border: #333333;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Circular', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+.app-header {
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Search results */
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.results-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.results-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Track cards */
+.track-card {
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.track-card:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-0.25rem);
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+}
+
+.track-info {
+    margin-bottom: 0.75rem;
+}
+
+.track-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-artist {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.play-link {
+    text-decoration: none;
+}
+
+.play-button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.play-button:hover {
+    background: var(--accent-hover);
+    transform: scale(1.03);
+}
+
+/* Now playing section */
+.now-playing {
+    background: var(--bg-secondary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.now-playing-info {
+    flex: 1;
+}
+
+.now-playing-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.now-playing-artist {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.now-playing-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.now-playing-link {
+    text-decoration: none;
+}
+
+.now-playing-button {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.now-playing-button:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Mood selection buttons */
+.stButton>button {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.stButton>button:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-0.25rem);
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #e5e5e5;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --border: #dddddd;
+}
